@@ -1,8 +1,8 @@
 # Oyunun kendisi bu repoya girmez (oyun kaynak kodu)
-game/
+game
 # İndirilen / üretilen şeyler
-fonts/
-igkit/
+fonts
+igkit
 cikti/
 rec/v2/
 rec/sess*/
