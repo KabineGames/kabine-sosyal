@@ -1,0 +1,21 @@
+# Oyunun kendisi bu repoya girmez (oyun kaynak kodu)
+game/
+# İndirilen / üretilen şeyler
+fonts/
+igkit/
+cikti/
+rec/v2/
+rec/sess*/
+rec/mg_*/
+rec/shots/
+rec/cards/
+rec/tmp/
+rec/edit/gfx/
+rec/edit/test_gfx/
+*.mp4
+*.wav
+!rec/sfx/*.wav
+*.png
+!kit/img/icon-512.png
+__pycache__/
+*.log

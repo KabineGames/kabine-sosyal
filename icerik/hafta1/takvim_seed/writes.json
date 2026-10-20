@@ -1,0 +1,38 @@
+[
+ {
+  "op": "set",
+  "collection": "posts",
+  "doc_id": "w1-r1-tanitim",
+  "file_path": "/tmp/claude-0/-home-claude/85f2f2ec-cbfd-550c-8670-8a0c34eeb97d/scratchpad/week1/seed/w1-r1-tanitim.json"
+ },
+ {
+  "op": "set",
+  "collection": "posts",
+  "doc_id": "w1-r2-zurafa",
+  "file_path": "/tmp/claude-0/-home-claude/85f2f2ec-cbfd-550c-8670-8a0c34eeb97d/scratchpad/week1/seed/w1-r2-zurafa.json"
+ },
+ {
+  "op": "set",
+  "collection": "posts",
+  "doc_id": "w1-c1-test",
+  "file_path": "/tmp/claude-0/-home-claude/85f2f2ec-cbfd-550c-8670-8a0c34eeb97d/scratchpad/week1/seed/w1-c1-test.json"
+ },
+ {
+  "op": "set",
+  "collection": "posts",
+  "doc_id": "w1-r3-prompter",
+  "file_path": "/tmp/claude-0/-home-claude/85f2f2ec-cbfd-550c-8670-8a0c34eeb97d/scratchpad/week1/seed/w1-r3-prompter.json"
+ },
+ {
+  "op": "set",
+  "collection": "posts",
+  "doc_id": "w1-r4-secim",
+  "file_path": "/tmp/claude-0/-home-claude/85f2f2ec-cbfd-550c-8670-8a0c34eeb97d/scratchpad/week1/seed/w1-r4-secim.json"
+ },
+ {
+  "op": "set",
+  "collection": "setup",
+  "doc_id": "profile",
+  "file_path": "/tmp/claude-0/-home-claude/85f2f2ec-cbfd-550c-8670-8a0c34eeb97d/scratchpad/week1/seed/setup.json"
+ }
+]
