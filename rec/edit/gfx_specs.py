@@ -36,6 +36,14 @@ TR = {
     'rew_b': ('rew', dict(text='◀◀ YA B\nDESEYDİN?')),
     'end_q': ('tagl', dict(text='SEN HANGİSİNİ\nSEÇERDİN?')),
     'end_ab': ('pill', dict(text='YORUMA A YA DA B YAZ')),
+    # prompter gafı
+    'rew_10': ('rew', dict(text='◀◀ 10 SANİYE\nÖNCE')),
+    'lt_mikrofon': ('lt', dict(tag='CANLI YAYIN', head='MİKROFON\nYERE DÜŞTÜ')),
+    'lt_prompter': ('lt', dict(tag='SON DAKİKA', head='PROMPTER DONDU!\nADAY DOĞAÇLAMADA')),
+    'lt_kurtardi': ('lt', dict(tag='SON DAKİKA', head='KEDİ EVLERİYLE\nTOPARLADI')),
+    'st_ne': ('stamp', dict(text='?!', size=300, color='#f5b83d')),
+    'end_q2': ('tagl', dict(text='SEN OLSAN\nNE DERDİN?')),
+    'end_yorum': ('pill', dict(text='CÜMLENİ YORUMA YAZ')),
 }
 
 EN = {
@@ -68,6 +76,13 @@ EN = {
     'rew_b': ('rew', dict(text='◀◀ WHAT IF\nYOU PICKED B?')),
     'end_q': ('tagl', dict(text='WHICH ONE\nWOULD YOU PICK?')),
     'end_ab': ('pill', dict(text='COMMENT A OR B')),
+    'rew_10': ('rew', dict(text='◀◀ 10 SECONDS\nEARLIER')),
+    'lt_mikrofon': ('lt', dict(tag='LIVE', head='MIC HITS\nTHE FLOOR', strip='CABINET NEWS · @KABINEGAME')),
+    'lt_prompter': ('lt', dict(tag='BREAKING', head='PROMPTER FROZE!\nCANDIDATE IMPROVISES', strip='CABINET NEWS · @KABINEGAME')),
+    'lt_kurtardi': ('lt', dict(tag='BREAKING', head='SAVED BY\nCAT HOUSES', strip='CABINET NEWS · @KABINEGAME')),
+    'st_ne': ('stamp', dict(text='?!', size=300, color='#f5b83d')),
+    'end_q2': ('tagl', dict(text='WHAT WOULD\nYOU SAY?')),
+    'end_yorum': ('pill', dict(text='COMMENT YOUR LINE')),
 }
 
 
