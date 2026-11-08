@@ -20,6 +20,12 @@ fi
 echo "== Instagram araç seti (MIT)"
 [ -d igkit ] || git clone --depth 1 https://github.com/Jakeschincariol/instagram-agent-skill.git igkit
 
+echo "== Pazarlama becerileri (coreyhaines31/marketingskills, MIT; sadece seçilenler)"
+if [ ! -d mskills/skills/aso ]; then
+  git clone -q --depth 1 --filter=blob:none --sparse https://github.com/coreyhaines31/marketingskills.git mskills
+  (cd mskills && git sparse-checkout set skills/aso skills/launch skills/social skills/content-strategy skills/video skills/marketing-psychology)
+fi
+
 echo "== Oyun dosyası"
 if [ -f game/kabine.html ]; then echo "game/kabine.html hazır"; else echo "EKSİK: game/kabine.html (Artifact WdwvebzHNYc8eboHZivxNi'yi oku ve buraya kopyala)"; fi
 echo "Tamam."

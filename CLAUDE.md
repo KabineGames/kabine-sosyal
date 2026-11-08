@@ -17,6 +17,9 @@ Bu repo, Umut'un mobil oyunu **Kabine: Başkanlık Simülatörü** (Instagram/Ti
 - Instagram: Meta Business Suite `latest/reels_composer` ve `latest/story_composer` (asset_id=1425179774015154). "Add Video" gizli bir dosya girişi yaratıp tıklıyor; önce sayfada `HTMLInputElement.prototype.click`'i dosya girişlerini DOM'a ekleyecek şekilde yamala, sonra o girişe `file_upload`. Saat alanları hours/minutes/meridiem.
 - Oyun App Store'da ücretsiz: https://apps.apple.com/tr/app/id6824178071 (YouTube açıklamasında tıklanabilir olması için kanalın telefon doğrulaması gerekiyor; Instagram profil linki sadece mobilden düzenlenir).
 
+## Pazarlama becerileri (mskills/)
+`tools/setup.sh` coreyhaines31/marketingskills'ten 6 beceriyi indirir (incelendi, sadece markdown): `aso` (App Store sayfası), `launch`, `social`, `content-strategy`, `video`, `marketing-psychology`. Gerektiğinde ilgili `mskills/skills/<ad>/SKILL.md`'yi oku; hepsini birden yükleme. `social` içindeki "listening/yorum yapılacak gönderi" kısmını otomatik yorum için kullanma. AgriciDaniel/claude-seo web sitesi içindir, Kabine'de kullanılmıyor.
+
 ## Kurulum (her yeni oturumda)
 1. `bash tools/setup.sh`
 2. Oyunu al: Artifact aracıyla `read` → https://claude.ai/artifact/WdwvebzHNYc8eboHZivxNi ; dönen tam HTML dosyasını `game/kabine.html` olarak kopyala. (Oyun kodu bu repoya commit edilmez.)
