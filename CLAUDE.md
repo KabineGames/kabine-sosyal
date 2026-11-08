@@ -15,7 +15,7 @@ Bu repo, Umut'un mobil oyunu **Kabine: Başkanlık Simülatörü** (Instagram/Ti
 - TikTok Studio: `tiktokstudio/upload` → açıklama + kapak ("Kapak yükleyin" dosya girişi) → Planla. "Otomatik içerik kontrolleri" penceresini iptal et (hesap ayarı).
 - YouTube Studio (Kabine kanalı UCeJceNiH9Ak3M24X1g187Lg, Fix My Floor Plan DEĞİL): başlık, açıklama, etiketler, kategori Oyun, "çocuklara özel değil", Görünürlük → Planlayın.
 - Instagram: Meta Business Suite `latest/reels_composer` ve `latest/story_composer` (asset_id=1425179774015154). "Add Video" gizli bir dosya girişi yaratıp tıklıyor; önce sayfada `HTMLInputElement.prototype.click`'i dosya girişlerini DOM'a ekleyecek şekilde yamala, sonra o girişe `file_upload`. Saat alanları hours/minutes/meridiem.
-- Oyun App Store'da ücretsiz. App Store linki henüz alınmadı.
+- Oyun App Store'da ücretsiz: https://apps.apple.com/tr/app/id6824178071 (YouTube açıklamasında tıklanabilir olması için kanalın telefon doğrulaması gerekiyor; Instagram profil linki sadece mobilden düzenlenir).
 
 ## Kurulum (her yeni oturumda)
 1. `bash tools/setup.sh`
