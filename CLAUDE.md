@@ -18,7 +18,7 @@ Bu repo, Umut'un mobil oyunu **Kabine: Başkanlık Simülatörü** (Instagram/Ti
 - Oyun App Store'da ücretsiz: https://apps.apple.com/tr/app/id6824178071 (YouTube açıklamasında tıklanabilir olması için kanalın telefon doğrulaması gerekiyor; Instagram profil linki sadece mobilden düzenlenir).
 
 ## Pazarlama becerileri (mskills/)
-`tools/setup.sh` coreyhaines31/marketingskills'ten 6 beceriyi indirir (incelendi, sadece markdown): `aso` (App Store sayfası), `launch`, `social`, `content-strategy`, `video`, `marketing-psychology`. Gerektiğinde ilgili `mskills/skills/<ad>/SKILL.md`'yi oku; hepsini birden yükleme. `social` içindeki "listening/yorum yapılacak gönderi" kısmını otomatik yorum için kullanma. AgriciDaniel/claude-seo web sitesi içindir, Kabine'de kullanılmıyor.
+`tools/setup.sh` coreyhaines31/marketingskills'ten 17 beceriyi indirir (incelendi, sadece markdown + örnek komutlar): `aso`, `launch`, `social`, `content-strategy`, `video`, `marketing-psychology`, `ad-creative`, `ads`, `copywriting`, `competitors`, `community-marketing`, `influencer-marketing`, `public-relations`, `marketing-ideas`, `directory-submissions`, `customer-research`, `image`. Gerektiğinde ilgili `mskills/skills/<ad>/SKILL.md`'yi oku; hepsini birden yükleme. `social` içindeki "listening/yorum yapılacak gönderi" kısmını otomatik yorum için kullanma; `public-relations` içindeki newsjacking (güncel olaya atlama) kırmızı çizgiye aykırı, kullanma. AgriciDaniel/claude-seo web sitesi içindir, Kabine'de kullanılmıyor.
 
 ## Kurulum (her yeni oturumda)
 1. `bash tools/setup.sh`

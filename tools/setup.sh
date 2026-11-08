@@ -21,9 +21,10 @@ echo "== Instagram araç seti (MIT)"
 [ -d igkit ] || git clone --depth 1 https://github.com/Jakeschincariol/instagram-agent-skill.git igkit
 
 echo "== Pazarlama becerileri (coreyhaines31/marketingskills, MIT; sadece seçilenler)"
-if [ ! -d mskills/skills/aso ]; then
+if [ ! -d mskills/skills/image ]; then
+  rm -rf mskills
   git clone -q --depth 1 --filter=blob:none --sparse https://github.com/coreyhaines31/marketingskills.git mskills
-  (cd mskills && git sparse-checkout set skills/aso skills/launch skills/social skills/content-strategy skills/video skills/marketing-psychology)
+  (cd mskills && git sparse-checkout set skills/aso skills/launch skills/social skills/content-strategy skills/video skills/marketing-psychology skills/ad-creative skills/ads skills/copywriting skills/competitors skills/community-marketing skills/influencer-marketing skills/public-relations skills/marketing-ideas skills/directory-submissions skills/customer-research skills/image)
 fi
 
 echo "== Oyun dosyası"
