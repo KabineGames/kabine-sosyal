@@ -9,6 +9,14 @@ Bu repo, Umut'un mobil oyunu **Kabine: Başkanlık Simülatörü** (Instagram/Ti
 - Plan: günde 1 video. Müzik Umut tarafından platformda eklenir (trend ses); videolara sadece efekt sesleri gömülür. Hesap "İçerik üreticisi" türünde olmalı (İşletme hesabında ünlü müzikler kapanıyor).
 - İçerik takvimi: https://claude.ai/artifact/5GgKG2i1p4ZYyMVfKuj7Pq (`posts` ve `setup` koleksiyonları; ArtifactData ile güncelle, yeni takvim açma).
 
+## Paylaşım (Kasım 2026'dan beri Claude yapar)
+- Umut'un Chrome'unda **Claude in Chrome** eklentisi; TikTok, YouTube Studio ve Meta Business Suite'te oturumları açık (girişi Umut yapar, şifre yok).
+- Video `file_upload` ile doğrudan bulut yolundan yüklenir (dosya başına <10 MB tut). Haftalık paket: cumartesi 7 video, her platformun kendi zamanlayıcısı.
+- TikTok Studio: `tiktokstudio/upload` → açıklama + kapak ("Kapak yükleyin" dosya girişi) → Planla. "Otomatik içerik kontrolleri" penceresini iptal et (hesap ayarı).
+- YouTube Studio (Kabine kanalı UCeJceNiH9Ak3M24X1g187Lg, Fix My Floor Plan DEĞİL): başlık, açıklama, etiketler, kategori Oyun, "çocuklara özel değil", Görünürlük → Planlayın.
+- Instagram: Meta Business Suite `latest/reels_composer` ve `latest/story_composer` (asset_id=1425179774015154). "Add Video" gizli bir dosya girişi yaratıp tıklıyor; önce sayfada `HTMLInputElement.prototype.click`'i dosya girişlerini DOM'a ekleyecek şekilde yamala, sonra o girişe `file_upload`. Saat alanları hours/minutes/meridiem.
+- Oyun App Store'da ücretsiz. App Store linki henüz alınmadı.
+
 ## Kurulum (her yeni oturumda)
 1. `bash tools/setup.sh`
 2. Oyunu al: Artifact aracıyla `read` → https://claude.ai/artifact/WdwvebzHNYc8eboHZivxNi ; dönen tam HTML dosyasını `game/kabine.html` olarak kopyala. (Oyun kodu bu repoya commit edilmez.)
