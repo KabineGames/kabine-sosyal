@@ -1,4 +1,4 @@
-# Durum (20 Ekim 2026)
+# Durum (8 Kasım 2026)
 
 ## Hesaplar
 - Instagram @kabinegame: açıldı. Hesap türü İşletme seçildi → **İçerik üreticisi**ne geçilmesi önerildi (müzik kütüphanesi için).
@@ -21,3 +21,11 @@
 1. Günde 1 video, aynı "KABİNE HABER" stilinde: prompter gafı, seçim gecesi, Muhabirden Kaç (dodge_0: 3 yakalanma → güneş gözlüğü → arabaya ulaştı), kriz kartları derlemesi (papağan, çeşme 4. açılış, anne araması), otobüs turu (simit/karanfil/saksı).
 2. İlk videonun sonuçlarına göre (izlenme süresi, kaydetme, paylaşım) sıradaki konuyu seç.
 3. Takvimi günlük plana göre güncelle; haftalık zamanlanmış görev (cumartesi 08:55) bu repoyu kullanacak şekilde güncellendi.
+
+## 8 Kasım 2026 — App Store çıkışı, paylaşım Claude'da
+- Oyun App Store'da (ücretsiz): https://apps.apple.com/tr/app/id6824178071 . Paylaşımı artık Claude, Umut'un Chrome'undan (Claude in Chrome) platformların kendi zamanlayıcılarıyla yapıyor (CLAUDE.md "Paylaşım").
+- Zamanlananlar: 8 Kas 20:00 çıkış videosu (TikTok, YT, IG Reel) + IG hikâye 20:05; 9 Kas 20:00 prompter gafı (TikTok, YT, IG).
+- YouTube kanalı doğrulandı, kanal profiline "App Store'da indir" linki eklendi.
+- Hazır, Umut'a gönderildi: hikâye görseli + 4 öne çıkan kapağı (cikti/v2/story), App Store önizleme videosu 886x1920 18,7 sn (App Store Connect'e Umut yükleyecek).
+- ASO önerileri (Umut'un onayı bekliyor): alt başlık "Komik Siyaset ve Seçim Oyunu"; anahtar kelimeler `başkan,belediye,politika,parti,miting,lider,ülke,strateji,piksel,kariyer,kriz,tycoon,yönetim`; tanıtım metni; puanlama penceresi (oyun kodu).
+- Yapılacak: IG "Çıktı" öne çıkanı (hikâye yayına girince), Instagram profil linki (Umut, telefondan), haftanın kalan 5 videosu (Muhabirden Kaç, kriz kartları, otobüs/simit, seçim gecesi, zürafa tekrar değil).
