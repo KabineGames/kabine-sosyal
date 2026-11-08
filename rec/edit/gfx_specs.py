@@ -44,6 +44,16 @@ TR = {
     'st_ne': ('stamp', dict(text='?!', size=300, color='#f5b83d')),
     'end_q2': ('tagl', dict(text='SEN OLSAN\nNE DERDİN?')),
     'end_yorum': ('pill', dict(text='CÜMLENİ YORUMA YAZ')),
+    # çıkış duyurusu
+    'st_cikti': ('stamp', dict(text='ÇIKTI!', size=300, color='#f5b83d', stroke=16)),
+    'lt_cikti': ('lt', dict(tag='SON DAKİKA', head='KABİNE\nAPP STORE’DA')),
+    'k1': ('cap', dict(text='KEDİYİ MECLİSE SOK', size=96, color='#ffffff')),
+    'k2': ('cap', dict(text='MEYDANI COŞTUR', size=104, color='#ffffff')),
+    'k3': ('cap', dict(text='OTOBÜSTEN SİMİT AT', size=96, color='#ffffff')),
+    'k4': ('cap', dict(text='BASINDAN KAÇ', size=110, color='#ffffff')),
+    'k5': ('cap', dict(text='CANLI YAYINDA GAF YAP', size=88, color='#f5b83d')),
+    'k6': ('cap', dict(text='SEÇİMİ KIL PAYI AL', size=96, color='#ffffff')),
+    'end_store': ('pill', dict(text='ŞİMDİ APP STORE’DA')),
 }
 
 EN = {
