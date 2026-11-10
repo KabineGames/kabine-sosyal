@@ -29,3 +29,9 @@
 - Hazır, Umut'a gönderildi: hikâye görseli + 4 öne çıkan kapağı (cikti/v2/story), App Store önizleme videosu 886x1920 18,7 sn (App Store Connect'e Umut yükleyecek).
 - ASO önerileri (Umut'un onayı bekliyor): alt başlık "Komik Siyaset ve Seçim Oyunu"; anahtar kelimeler `başkan,belediye,politika,parti,miting,lider,ülke,strateji,piksel,kariyer,kriz,tycoon,yönetim`; tanıtım metni; puanlama penceresi (oyun kodu).
 - Yapılacak: IG "Çıktı" öne çıkanı (hikâye yayına girince), Instagram profil linki (Umut, telefondan), haftanın kalan 5 videosu (Muhabirden Kaç, kriz kartları, otobüs/simit, seçim gecesi, zürafa tekrar değil).
+
+## 10 Kasım 2026 — hafta 3 zamanlandı
+- 6 video (rec/edit/make_hafta3.py, metinler icerik/hafta3/aciklamalar.md) TikTok, YouTube Shorts ve Instagram Reel'de 10–15 Kasım her gün 20:00'ye planlandı: dodge, kriz kartları, otobüs, seçim gecesi, 8 mini oyun, kedi A/B.
+- IG kapak görseli: seçim, mini oyun ve kedi reel'lerinde özel kapak var; dodge, kart, otobüs reel'lerinde Instagram'ın önerdiği kare.
+- Reklam rehberi: icerik/reklam/REHBER.md (öne çıkarmadan önce 3–5 gün organik bekle; siyaset temalı reklam reddi riski).
+- Sıradaki: 16 Kasım haftası; ilk sonuçlara göre konu seçimi.
