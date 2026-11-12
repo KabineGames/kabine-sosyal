@@ -87,6 +87,19 @@ TR = {
     'end_mg': ('tagl', dict(text='EN ÇOK HANGİSİNİ\nOYNARDIN?')),
     'c_kedi': ('cap', dict(text='BELEDİYEYE KEDİ YERLEŞTİ', size=82, color='#ffffff')),
     'cap_ab': ('cap', dict(text='SEN OLSAN: A MI, B Mİ?', size=92, color='#f5b83d')),
+    # reklam (siyaset kelimesi yok)
+    'ra_hook': ('cap', dict(text='1 OYUNDA 8 MİNİ OYUN', size=92, color='#f5b83d')),
+    'rb_hook': ('cap', dict(text='HANGİSİNDE TAKILIRSIN?', size=90, color='#f5b83d')),
+    'r1': ('cap', dict(text='OTOBÜS TURU', size=104, color='#ffffff')),
+    'r2': ('cap', dict(text='BASINDAN KAÇ', size=104, color='#ffffff')),
+    'r3': ('cap', dict(text='CANLI MÜNAZARA', size=100, color='#ffffff')),
+    'r4': ('cap', dict(text='KAHVALTI MARATONU', size=92, color='#ffffff')),
+    'r5': ('cap', dict(text='AFİŞ OPERASYONU', size=96, color='#ffffff')),
+    'r6': ('cap', dict(text='TEMEL ATMA', size=104, color='#ffffff')),
+    'r7': ('cap', dict(text='ETİKET SAVAŞI', size=104, color='#ffffff')),
+    'r_more': ('stamp', dict(text='VE DAHASI!', size=190, color='#f5b83d')),
+    'r_end': ('tagl', dict(text='ÜCRETSİZ\nİNDİR')),
+    'r_ara': ('pill', dict(text='APP STORE’DA “KABİNE” ARA')),
 }
 
 EN = {
