@@ -99,7 +99,7 @@ TR = {
     'r7': ('cap', dict(text='ETİKET SAVAŞI', size=104, color='#ffffff')),
     'r_more': ('stamp', dict(text='VE DAHASI!', size=190, color='#f5b83d')),
     'r_end': ('tagl', dict(text='ÜCRETSİZ\nİNDİR')),
-    'r_ara': ('pill', dict(text='APP STORE’DA “KABİNE” ARA')),
+    'r_ara': ('pill', dict(text='APP STORE: “KABİNE BAŞKANLIK”')),
     # reklam 2: karar odaklı
     'ad_pov': ('cap', dict(text='POV: BELEDİYEDE İLK GÜNÜN', size=84, color='#f5b83d')),
     'ad_ver': ('cap', dict(text='BU KARARI SEN VER:', size=100, color='#f5b83d')),
@@ -163,6 +163,19 @@ EN = {
     'st_ne': ('stamp', dict(text='?!', size=300, color='#f5b83d')),
     'end_q2': ('tagl', dict(text='WHAT WOULD\nYOU SAY?')),
     'end_yorum': ('pill', dict(text='COMMENT YOUR LINE')),
+    # ad (mini-games)
+    'c_kedi': ('cap', dict(text='A CAT MOVED INTO CITY HALL…', size=78, color='#ffffff')),
+    'ad2_15': ('cap', dict(text='15 MINI-GAMES', size=120, color='#f5b83d')),
+    'i_bus': ('cap', dict(text='THROW BAGELS FROM THE BUS', size=80, color='#ffffff')),
+    'i_dodge': ('cap', dict(text='DODGE THE REPORTERS', size=96, color='#ffffff')),
+    'i_stack': ('cap', dict(text='BUILD IT. DON’T DROP IT.', size=88, color='#ffffff')),
+    'i_market': ('cap', dict(text='SHAKE EVERY HAND', size=100, color='#ffffff')),
+    'i_gala': ('cap', dict(text='MEMORIZE THE DONORS', size=92, color='#ffffff')),
+    'i_trend': ('cap', dict(text='TAKE OVER THE TRENDS', size=92, color='#ffffff')),
+    'r_more': ('stamp', dict(text='AND MORE!', size=190, color='#f5b83d')),
+    'ad2_end': ('tagl', dict(text='FROM CITY HALL\nTO THE TOP')),
+    'ad_free': ('pill', dict(text='DOWNLOAD FREE')),
+    'r_ara': ('pill', dict(text='APP STORE: “CABINET PRESIDENT”')),
 }
 
 

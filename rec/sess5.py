@@ -1,12 +1,12 @@
 import sys, json, time
 sys.path.insert(0, '.')
 from harness import *
-from setup_js import NEWGAME
+from setup_js import NEWGAME, KLANG, SUF
 IDS = sys.argv[1:]
 with sync_playwright() as p:
     for mid in IDS:
-        OUT = SCR / 'rec' / f'mg_{mid}'
-        b, ctx, page = open_game(p)
+        OUT = SCR / 'rec' / f'mg_{mid}{SUF}'
+        b, ctx, page = open_game(p, lang=KLANG)
         page.evaluate(NEWGAME, {})
         page.evaluate("""() => { const {G,Events}=window.__cbs; G.S.week=2; G.S.tier=2; Events.pick=()=>null; G.startWeek(); }""")
         time.sleep(0.8)

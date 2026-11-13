@@ -1,7 +1,7 @@
 import sys, json, time, random, math
 sys.path.insert(0, '.')
 from harness import *
-from setup_js import NEWGAME
+from setup_js import NEWGAME, KLANG, SUF
 from bots import RALLY_BOT, PROMPTER_FORCE
 V2 = SCR / 'rec' / 'v2'
 LOGGER = """() => { window.__ev = []; const seen = new WeakSet();
@@ -9,7 +9,8 @@ LOGGER = """() => { window.__ev = []; const seen = new WeakSet();
     const cls = n.className || ''; if (/float-txt|banner|verdict-big|prompter|slogan/.test(cls) || n.querySelector?.('.prompter')) window.__ev.push([Date.now()/1000, String(cls).slice(0,30), (n.textContent||'').trim().slice(0,80)]); } })
   .observe(document.body, {childList: true, subtree: true}); }"""
 
-def session(name, fn, lang='tr'):
+def session(name, fn, lang=KLANG):
+    name = name + SUF
     with sync_playwright() as p:
         b, ctx, page = open_game(p, lang=lang)
         page.evaluate(NEWGAME, {})
@@ -106,6 +107,9 @@ def dodge(seed):
     return fn
 
 which = sys.argv[1:] or ['cards', 'rally', 'bus', 'dodge']
+if 'cat' in which: session('card_town_cat', card('town_cat', 1))
+if 'bus0' in which: session('bus_0', bus(100))
+if 'dodge0' in which: session('dodge_0', dodge(200))
 if 'cards' in which:
     for evid, pick in [('town_cat', 1), ('parrot', 1), ('fountain', 0), ('mom_call', 1)]: session(f'card_{evid}', card(evid, pick))
 if 'rally' in which: session('rally_fail', rally_fail)
