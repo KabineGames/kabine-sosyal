@@ -42,5 +42,7 @@ Bu repo, Umut'un mobil oyunu **Kabine: Başkanlık Simülatörü** (Instagram/Ti
 - Alt bant: kart sahnelerinde üstte (y≈548), miting/seçim sahnelerinde altta (y≈1345). Kart sahnelerinde kamera merkezi (540, 840) ve zoom ≤1.05 (kart yazıları kesilmesin).
 - Her alt bant en az ~0,9 sn tam görünür kalmalı.
 
+- Motor eklentileri (Kasım 2026): `anim='words'` kinetik yazı — kelimeler sırayla yaylanarak düşer (`step`=kelime arası sn; kanca yazılarında kullan). Sahneye `zoom_out=(süre, x, y)` + sonrakine `zoom_in=süre` → kesmesiz "içinden geçiş" (whip yerine). Her video gönderilmeden önce `rec/edit/QA.md` listesiyle Sonnet eleştirmen ajanına kontrol ettir.
+
 Durum ve yapılacaklar: `icerik/DURUM.md`.
 - Notlar (Kasım 2026): TikTok saat çarkı tıklamayla ilerler (alt öğeye tıklayınca 3 satır kayar); tarih takviminde hafta pazartesi değil pazar sütunuyla başlar. Meta reels composer'da "Thumbnail → Upload image" ile kapak yüklenir (aynı yamalı dosya girişi). YouTube'da tarih seçici açıkken yazı kutusuna "15 Kas 2026" yazıp Enter de çalışır.

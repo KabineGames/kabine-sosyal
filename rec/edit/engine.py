@@ -140,6 +140,43 @@ def overlay_state(o, u):
     return x, y, s, r, a
 
 
+_WORDS = {}
+
+
+def word_parts(path, gap=5):
+    """Görselin boş sütunlarından (gölge dahil) kelime parçalarını bul: [(crop_rgba, merkezden_x)]."""
+    if path in _WORDS: return _WORDS[path]
+    im = load_rgba(path); ink = (im[:, :, 3] > 20).sum(axis=0) >= 4
+    spans, x, n = [], 0, len(ink)
+    while x < n:
+        if not ink[x]: x += 1; continue
+        s0 = x
+        while x < n:
+            if ink[x]: x += 1; continue
+            g0 = x
+            while x < n and not ink[x]: x += 1
+            if x - g0 >= gap or x >= n: x = g0; break
+        spans.append((s0, x))
+    parts = [(im[:, x0:x1].copy(), (x0 + x1) / 2 - im.shape[1] / 2) for x0, x1 in spans] or [(im, 0.0)]
+    _WORDS[path] = parts; return parts
+
+
+def paste_words(frame, o, u):
+    """anim='words': kelimeler sırayla (o['step'] sn arayla) yaylanarak düşer — kinetik kanca yazısı."""
+    u0, u1 = o['u0'], o.get('u1', 1e9)
+    if u < u0 or u > u1: return
+    sc0, rot = o.get('scale', 1.0), o.get('rot', 0.0); step = o.get('step', 0.11)
+    th = math.radians(-rot)
+    for i, (img, off) in enumerate(word_parts(o['img'])):
+        k = u - u0 - i * step
+        if k < 0: continue
+        s = sc0; a = min(1, k / 0.05); dy = 0.0
+        if k < 0.2: s *= 0.4 + 0.6 * ease_out_back(k / 0.2, 2.8); dy = -40 * (1 - k / 0.2)
+        if o.get('out') == 'fade' and u1 - u < 0.12: a *= (u1 - u) / 0.12
+        x = o['x'] + off * sc0 * math.cos(th); y = o['y'] + off * sc0 * math.sin(th) + dy
+        paste(frame, img, x, y, s, rot, a)
+
+
 # ---------------------------------------------------------------- effects
 def camera(frame, zoom, cx, cy, rot=0.0, dx=0.0, dy=0.0):
     if abs(zoom - 1) < 1e-3 and abs(rot) < 1e-3 and abs(dx) < 0.5 and abs(dy) < 0.5 and abs(cx - W / 2) < 0.5 and abs(cy - H / 2) < 0.5:
@@ -240,7 +277,16 @@ def render(shots, out_path, glob_ov=(), sfx=(), music_gain=0.0, grade_on=True):
                 dx += rnd.uniform(-1, 1) * e[2] * k; dy += rnd.uniform(-1, 1) * e[2] * k; rot += rnd.uniform(-1, 1) * e[2] * 0.02 * k
             if e[0] == 'punch' and e[1] <= u <= e[1] + e[3]:
                 k = (u - e[1]) / e[3]; z *= 1 + e[2] * math.sin(math.pi * min(1, k * 1.0)) * (1 - k) ** 0.3
+        zb = 0.0
+        if s.get('zoom_out'):
+            d, tx, ty = s['zoom_out']; rem = s['dur'] - u
+            if rem < d:
+                p = 1 - rem / d; z *= 1 + 2.6 * p ** 2.2; cx += (tx - cx) * smooth(p); cy += (ty - cy) * smooth(p); zb = p
+        if s.get('zoom_in') and u < s['zoom_in']:
+            p = 1 - u / s['zoom_in']; z *= 1 + 1.8 * p ** 2; zb = p
         frame = camera(frame, z, cx, cy, rot, dx, dy)
+        if zb > 0.05:  # hız bulanıklığı
+            k = int(3 + 40 * zb); frame = cv2.addWeighted(frame, 1 - 0.6 * zb, cv2.blur(frame, (k, k)), 0.6 * zb, 0)
         for e in s.get('fx', []):
             name = e[0]
             if name == 'chroma' and e[1] <= u <= e[2]: frame = chroma(frame, e[3])
@@ -262,6 +308,7 @@ def render(shots, out_path, glob_ov=(), sfx=(), music_gain=0.0, grade_on=True):
         frame = (frame.astype(np.float32) * vig).astype(np.uint8)
         # overlays
         for o in s.get('ov', []):
+            if o.get('anim') == 'words': paste_words(frame, o, u); continue
             stt = overlay_state(o, u)
             if stt: paste(frame, load_rgba(o['img']), stt[0], stt[1], stt[2], stt[3], stt[4])
         for o in glob_ov:
