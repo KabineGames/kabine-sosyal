@@ -4,6 +4,7 @@ SUF = '' if KLANG == 'tr' else '_' + KLANG
 OPTS = {
     'tr': {'country': 'TR', 'city': 'Eskişehir', 'name': 'Sabri Asfaltoğlu', 'rival': 'Necmi Kaldırım', 'party': 'Demlik Partisi'},
     'en': {'country': 'US', 'city': None, 'name': 'Rick Asphalt', 'rival': 'Ned Sidewalk', 'party': 'Kettle Party'},
+    'pt': {'country': 'BR', 'city': 'Curitiba', 'name': 'Rui Asfalto', 'rival': 'Nei Calçada', 'party': 'Partido Chaleira'},
 }[KLANG]
 NEWGAME = """(o) => { const {G,Screens,U,P}=window.__cbs; const opts=Object.assign(%s, o||{});
   const C0 = COUNTRIES.find(c=>c.code===opts.country);
