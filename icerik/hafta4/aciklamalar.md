@@ -2,7 +2,7 @@
 Videolar: `cikti/v2/hafta4/<id>_<dil>.mp4` (kurgu: `rec/edit/make_hafta4.py`, kayıtlar: `rec/rec4.py`).
 Bio linki (metinlerde URL yok, sadece "link in bio / link na bio / link profilde"): https://apps.apple.com/app/id6824178071
 
-Kurallar: Reklam metinlerinde election / vote / campaign / party / candidate / rally / president (PT: eleição, voto, campanha, partido, candidato, comício, presidente) yok; oyun adı reklamda sadece "Cabinet". Sahte sayı/iddia yok ("15 mini-games" oyun kodunda doğrulandı). İlk 125 karakter tek başına anlaşılır.
+Kurallar: Reklam metinlerinde election / vote / campaign / party / candidate / rally / president (PT: eleição, voto, campanha, partido, candidato, comício, presidente) yok; oyun adı reklamda sadece "Cabinet". Sahte sayı/iddia yok ("18 mini-games" oyun kodunda doğrulandı, MGMETA). İlk 125 karakter tek başına anlaşılır.
 
 ---
 
@@ -86,13 +86,13 @@ Sen zamanlayabilir misin? Kabine: Başkanlık Simülatörü App Store'da ücrets
 **EN (English account):**
 A tape leaked and my scandal file blew up. One week earlier I said yes to an influencer collab. Here's how I flipped it.
 
-Counterattack mini-game: Trend War. Made by 1 person, 15 mini-games. Cabinet: President Simulator is free on iPhone, link in bio.
+Counterattack mini-game: Trend War. Made by 1 person, 18 mini-games. Cabinet: President Simulator is free on iPhone, link in bio.
 
 #mobilegame #indiedev #pixelart #indiegame #solodev
 
 **TR (TR hesabı):**
 Ses kaydı sızdı, skandal dosyam patladı. Bir hafta önce bir fenomenle video çekmeyi kabul etmiştim. Ters çevirişim böyle oldu.
 
-Karşı saldırı mini oyunu: Etiket Savaşı. 1 kişi yaptı, 15 mini oyun. Kabine: Başkanlık Simülatörü App Store'da ücretsiz, link profilde.
+Karşı saldırı mini oyunu: Etiket Savaşı. 1 kişi yaptı, 18 mini oyun. Kabine: Başkanlık Simülatörü App Store'da ücretsiz, link profilde.
 
 #mobiloyun #indiedev #pikselsanat #indiegame #kabine

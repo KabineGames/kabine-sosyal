@@ -35,3 +35,10 @@
 - IG kapak görseli: seçim, mini oyun ve kedi reel'lerinde özel kapak var; dodge, kart, otobüs reel'lerinde Instagram'ın önerdiği kare.
 - Reklam rehberi: icerik/reklam/REHBER.md (öne çıkarmadan önce 3–5 gün organik bekle; siyaset temalı reklam reddi riski).
 - Sıradaki: 16 Kasım haftası; ilk sonuçlara göre konu seçimi.
+
+## 24 Kasım 2026 — Hafta 4 (dal: hafta4)
+- 12 video hazır: `cikti/v2/hafta4/` — reklam a1/a2/a3 (EN+PT: Muhabirden Kaç, çöp grevi kartı, Kadrajda Kal), organik o1/o2/o3 (EN+TR: seçim gecesi son bölge, miting bilerek kötü zamanlama, skandal→Etiket Savaşı). Metinler `icerik/hafta4/aciklamalar.md`.
+- Bağımsız değerlendirici turları sonrası düzeltmeler: reklam kapanışındaki arama satırı kaldırıldı (EN'de "President" geçiyordu); dodge ve miting kayıtları uydurma ülke + mor/turkuaz/turuncu bayrakla yeniden alındı (gerçek ABD/Brezilya bayrağı ve Ukrayna'ya benzeyen mavi-sarı kalabalık bayrakları çıktı); kanca kelime arası ≤0,06 sn; A2 sonundaki A/B rozetleri kaldırıldı; açıklamalarda 18 mini oyun.
+- Kayıtlar rastgele: dodge ve miting zamanları (make_hafta4.py T) her yeni kayıtta marks.json/events.json'dan yeniden ölçülmeli (kare ≈ olay + 0,2–0,3 sn).
+- Organik videolarda bilinçli olarak kapanış kartı yok (CTA açıklamada).
+- Sıradaki: TR hesabına o1/o2/o3_tr zamanlama; Brezilya Meta testi için Umut'un reklam hesabı/bütçe onayı.

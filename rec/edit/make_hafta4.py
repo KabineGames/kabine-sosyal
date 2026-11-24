@@ -137,7 +137,7 @@ def lt_cover(n, u1, y=1195, sc=0.88):
 LX, LW = 455, 790
 def cap(n, u0, u1, y=430, rot=-2, sc=1.0, x=W / 2, maxw=960): d = H3.cap(n, u0, u1, y, rot); d['scale'] = min(sc, maxw / size(n)[0]); d['x'] = x; return d
 def words(n, u0, u1, y=430, rot=-2, step=0.09, x=W / 2, maxw=960):
-    return dict(img=g(n), u0=u0, u1=u1, x=x, y=y, anim='words', step=step, rot=rot, scale=min(1.0, maxw / size(n)[0]))
+    return dict(img=g(n), u0=u0, u1=u1, x=x, y=y, anim='words', step=min(step, 0.06), rot=rot, scale=min(1.0, maxw / size(n)[0]))
 def stamp(n, u0, u1, x=W / 2, y=640, rot=-6, sc=1.0, maxw=940): return H3.stamp(n, u0, u1, x, y, rot, min(sc, maxw / size(n)[0]))
 def rew(n, u0, u1, y=430, x=W / 2, maxw=940): return dict(img=g(n), u0=u0, u1=u1, x=x, y=y, anim='pop', out='cut', scale=min(1.0, maxw / size(n)[0]))
 def badge(n, u0, u1, y, anim='pop', sc=0.6): return dict(img=g(n), u0=u0, u1=u1, x=780, y=y, anim=anim, out='cut', rot=-8, scale=sc)
@@ -154,7 +154,7 @@ def ad_end(lang, dur=1.8):
     ov = [dict(img=g('end_icon'), u0=0.0, u1=9, x=cx, y=560, anim='drop', scale=0.5),
           dict(img=g('end_logo'), u0=0.0, u1=9, x=cx, y=830, anim='slam', scale=0.78),
           dict(img=g('end_free'), u0=0.5, u1=9, x=cx, y=1040, anim='pop', rot=-3, pulse=True, scale=min(1.25, 900 / size('end_free')[0])),
-          dict(img=g('end_search'), u0=0.7, u1=9, x=cx, y=1150, anim='fade', scale=min(1.0, 900 / size('end_search')[0])),
+          # arama satırı kaldırıldı (24 Kas): EN'de yasaklı "President" geçiyordu, PT terimi doğrulanmadı; reklamın Yükle düğmesi zaten mağazaya gider
           dict(img=g('end_handle'), u0=0.5, u1=9, x=cx, y=1260, anim='fade')]
     return dict(card=g('end_bg'), dur=dur, ov=ov, fx=[('flash', 0.0, 0.1, 0.5)],
                 sfx=[('impact', 0.0, 0.7), ('sting', 0.02, 0.5), ('pop2', 0.5, 0.6), ('ding', 0.52, 0.4)])
@@ -167,8 +167,9 @@ RES_CAM = (1.0, 540, 960)      # sonuç ekranı tam kadraj; üstteki sahne bayra
 # ---------------------------------------------------------------- A1: Muhabirden Kaç (reklam)
 def a1(lang):
     # zamanlar kayıttaki karelerden ölçüldü (olay günlüğü kareden ~0,3 sn önde)
-    T = {'en': dict(hit=9.78, hit_y=640, res=25.7, car=41.25, shades=40.9),
-         'pt': dict(hit=8.15, hit_y=1081, res=25.8, car=36.75, shades=36.55)}[lang]
+    # 24 Kas: uydurma ülke (XX) ile yeniden kaydedildi; zamanlar karelerden ölçüldü
+    T = {'en': dict(hit=7.3, hit_y=1060, res=25.76, car=38.2, shades=37.65),
+         'pt': dict(hit=9.25, hit_y=1060, res=25.76, car=44.4, shades=43.6)}[lang]
     s = V('dodge', lang); h = T['hit']; sh = []
     sh.append(dict(src=s, dur=2.0, time=[(0, h - 1.0), (1.0, h), (1.05, h + 0.06), (2.0, h + 0.13)],
         cam=[(0, 1.2, 540, T['hit_y'] + 300), (1.0, 1.45, 540, T['hit_y']), (2.0, 1.48, 540, T['hit_y'])],
@@ -218,7 +219,7 @@ def a2(lang):
         ov=[rew('a2_rew', 0.0, 1.0, y=430), stamp('b_a', 1.0, 1.5, x=W - 150, y=1150, rot=-8, sc=0.8), lt('a2_a', 1.5, 3.0, TOP)],
         sfx=[('rewind', 0.0, 0.6), ('select', 1.0), ('ding', 1.5, 0.5), ('applause', 1.6, 0.5), ('coin', 1.8, 0.5)]))
     sh.append(dict(src=sB, dur=2.0, time=[(0, cb + 3.6), (2.0, cb + 4.1)], cam=[(0, 1.0, 540, 840), (2.0, 1.02, 540, 845)],
-        ov=[question('a2_q', 0.0, 2.0), badge('b_a', 0.5, 2.0, 1150, sc=0.5), badge('b_b', 0.5, 2.0, 1290, sc=0.5)],
+        ov=[question('a2_q', 0.0, 2.0)],  # A/B rozetleri kart yazısını örtüyordu
         sfx=[('pop2', 0.0, 0.6), ('pop2', 0.5, 0.4)]))
     thru(sh[0], sh[1], 0.15, 540, 1200); thru(sh[3], sh[4], 0.15, 540, 900)
     sh.append(ad_end(lang))
@@ -289,8 +290,9 @@ def o1(lang):
 
 # ---------------------------------------------------------------- O2: miting (organik)
 def o2(lang):
-    T = {'en': dict(gaffe=5.2, prompter=9.35, gaffe2=12.7, res1=17.6, h1=26.6, res2=33.4),
-         'tr': dict(gaffe=5.2, prompter=8.1, gaffe2=11.35, res1=16.0, h1=25.25, res2=31.8)}[lang]
+    # 24 Kas: uydurma üçlü bayrakla yeniden kaydedildi; marks.json + olay günlüğünden (kare ≈ olay + 0,2 sn)
+    T = {'en': dict(gaffe=5.2, prompter=8.38, gaffe2=11.74, res1=16.64, h1=26.6, res2=33.4),
+         'tr': dict(gaffe=5.23, prompter=8.9, gaffe2=12.26, res1=17.7, h1=27.23, res2=34.03)}[lang]
     s = V('rally', lang); sh = []; gf = T['gaffe']
     RC, TY = (1.04, 540, 1000), 375   # yazılar sahnenin boş üst gökyüzünde (pankart/kalabalık açık kalır)
     sh.append(dict(src=s, dur=4.0, time=[(0, gf - 2.0), (2.0, gf), (2.15, gf + 0.08), (4.0, gf + 1.0)], cam=[(0, *RC), (4.0, 1.07, 540, 990)],

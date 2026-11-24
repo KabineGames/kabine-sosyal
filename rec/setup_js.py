@@ -10,6 +10,7 @@ NEWGAME = """(o) => { const {G,Screens,U,P}=window.__cbs; const opts=Object.assi
   const C0 = COUNTRIES.find(c=>c.code===opts.country);
   G.newGame({country:opts.country, name: opts.name, city: opts.city||C0.cities[0],
     look:{skin:'#e8b48f',hair:2,hairColor:'#3a2a1e',facial:0,glasses:0,suit:'#2b3350',tie:'#8a4fd8'},
+    custom: opts.country==='XX' ? {name: opts.city||'New Town', colors:['#8a4fd8','#14a5a5','#f08a24'], sys:'pres', layout:'h'} : undefined,  // uydurma üçlü bayrak (gerçek bayrak değil)
     style: 'people', partyName: opts.party, partyColor: '#8a4fd8'});
   G.S.rival.name = opts.rival; G.S.rival.look = {skin:'#f6d3b3',hair:1,hairColor:'#b5452e',facial:0,glasses:0,suit:'#5a5f6b',tie:'#eeeeee'};
   document.documentElement.style.setProperty('--party', G.S.party.color);

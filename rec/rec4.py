@@ -271,7 +271,7 @@ def scandal(page, rec):
 
 
 which = sys.argv[1:]
-if 'dodge' in which: session('h4_dodge', dodge_ad, ad=True)
+if 'dodge' in which: session('h4_dodge', dodge_ad, ad=True, opts={'country': 'XX', 'city': 'New Town' if KLANG == 'en' else 'Cidade Nova'})  # uydurma ülke: gerçek bayrak yok
 if 'strike' in which: session('h4_strike', card_force('strike', 1, 'lose'), ad=True)
 if 'strikeA' in which: session('h4_strikeA', card_force('strike', 0), ad=True)
 if 'frame' in which: session('h4_frame', frame_ad, ad=True)
