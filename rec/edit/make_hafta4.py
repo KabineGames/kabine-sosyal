@@ -76,9 +76,10 @@ TEXT = {
     'o3_c3': {'en': 'COUNTERATTACK: TREND WAR', 'tr': 'KARŞI SALDIRI: ETİKET SAVAŞI'},
     'o3_win': {'en': 'TREND IS MINE', 'tr': 'GÜNDEM BENİM'},
     'o3_lt2': {'en': 'THE CONVERSATION\nMOVED ON', 'tr': 'GÜNDEM DEĞİŞTİ,\nSKANDAL SÖNÜYOR'},
-    'o3_end': {'en': 'MADE BY 1 PERSON · 15 MINI-GAMES', 'tr': '1 KİŞİ YAPTI · 15 MİNİ OYUN'},
+    'o3_end': {'en': 'MADE BY 1 PERSON · 18 MINI-GAMES', 'tr': '1 KİŞİ YAPTI · 18 MİNİ OYUN'},
     # ortak
     'end_free': {'en': 'FREE ON IPHONE', 'pt': 'GRÁTIS NO IPHONE'},
+    'end_search': {'en': 'Search: Cabinet President Sim', 'pt': 'Busque: Gabinete Simulador'},
 }
 # tür, ek ayarlar (yazı TEXT'ten)
 KIND = {
@@ -97,6 +98,7 @@ KIND = {
     'o3_lt1': ('lt', dict(tag=BRK)), 'o3_c2': ('cap', dict(size=92, color=GOLD)), 'o3_c3': ('cap', dict(size=84, color=GOLD)),
     'o3_win': ('stamp', dict(size=150, color=GOLD)), 'o3_lt2': ('lt', dict(tag=BRK)), 'o3_end': ('cap', dict(size=72, color=GOLD)),
     'end_free': ('pill', {}),
+    'end_search': ('cap', dict(size=62, color=WHITE)),
 }
 TR_LIVE = {'tr': 'CANLI', 'en': 'LIVE', 'pt': 'AO VIVO'}
 
@@ -152,7 +154,8 @@ def ad_end(lang, dur=1.8):
     ov = [dict(img=g('end_icon'), u0=0.0, u1=9, x=cx, y=560, anim='drop', scale=0.5),
           dict(img=g('end_logo'), u0=0.0, u1=9, x=cx, y=830, anim='slam', scale=0.78),
           dict(img=g('end_free'), u0=0.5, u1=9, x=cx, y=1040, anim='pop', rot=-3, pulse=True, scale=min(1.25, 900 / size('end_free')[0])),
-          dict(img=g('end_handle'), u0=0.5, u1=9, x=cx, y=1180, anim='fade')]
+          dict(img=g('end_search'), u0=0.7, u1=9, x=cx, y=1150, anim='fade', scale=min(1.0, 900 / size('end_search')[0])),
+          dict(img=g('end_handle'), u0=0.5, u1=9, x=cx, y=1260, anim='fade')]
     return dict(card=g('end_bg'), dur=dur, ov=ov, fx=[('flash', 0.0, 0.1, 0.5)],
                 sfx=[('impact', 0.0, 0.7), ('sting', 0.02, 0.5), ('pop2', 0.5, 0.6), ('ding', 0.52, 0.4)])
 
@@ -256,7 +259,7 @@ def a3(lang):
 def o1(lang):
     T = {'en': dict(left=6.95, last=7.8, verdict=8.95), 'tr': dict(left=7.0, last=8.05, verdict=9.1)}[lang]  # karelerden ölçüldü
     s = V('night', lang); sh = []; L, Lt, Vd = T['left'], T['last'], T['verdict']
-    CAM = (1.0, 540, 960); Y = 1340   # yazılar yorum kutusunun üstünde: harita, yüzdeler ve çubuk açık kalır
+    CAM = (1.0, 540, 960); Y = 1255   # yazılar yorum kutusunun üstünde: harita, yüzdeler ve çubuk açık kalır
     sh.append(dict(src=s, dur=3.5, time=[(0, L + 0.05), (3.5, L + 0.6)], cam=[(0, *CAM), (3.5, 1.05, 540, 900)],
         fx=[('flash', 0.0, 0.1, 0.4)], ov=[words('o1_hook', 0.0, 3.5, y=Y, step=0.1, rot=-1, x=LX, maxw=LW)],
         sfx=[('heart', 0.2, 0.9), ('heart', 0.7, 0.9), ('heart', 1.4, 1.0), ('heart', 1.9, 1.0), ('heart', 2.6, 1.0), ('heart', 3.1, 1.0)]))
