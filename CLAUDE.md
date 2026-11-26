@@ -46,3 +46,6 @@ Bu repo, Umut'un mobil oyunu **Kabine: Başkanlık Simülatörü** (Instagram/Ti
 
 Durum ve yapılacaklar: `icerik/DURUM.md`.
 - Notlar (Kasım 2026): TikTok saat çarkı tıklamayla ilerler (alt öğeye tıklayınca 3 satır kayar); tarih takviminde hafta pazartesi değil pazar sütunuyla başlar. Meta reels composer'da "Thumbnail → Upload image" ile kapak yüklenir (aynı yamalı dosya girişi). YouTube'da tarih seçici açıkken yazı kutusuna "15 Kas 2026" yazıp Enter de çalışır.
+
+## Brezilya (PT-BR) kanalı
+YouTube @gabinetejogo (UCmgZd4PBjlv733HF0ohC4zg). Hat: `rec/edit/make_br.py` + `gfx_pt.py` + `music_synth.py`, `KLANG=pt`. Durum ve sıradaki işler: `icerik/br/DURUM_BR.md`.

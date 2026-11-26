@@ -34,6 +34,12 @@ def route_all(route):
         name = url.rsplit('/', 1)[-1]
         return route.fulfill(status=200, content_type='font/ttf', body=FONT_FILES[name].read_bytes())
     if url.startswith('https://kabine.local/'):
+        rel = url.split('https://kabine.local/',1)[1].split('?')[0]
+        f = GAME.parent / rel
+        if rel and rel != 'index.html' and f.is_file():
+            import mimetypes
+            ct = mimetypes.guess_type(str(f))[0] or ('font/ttf' if f.suffix=='.ttf' else 'application/octet-stream')
+            return route.fulfill(status=200, content_type=ct, body=f.read_bytes())
         return route.fulfill(status=200, content_type='text/html; charset=utf-8', body=GAME.read_bytes())
     return route.abort()
 

@@ -3,6 +3,7 @@ KLANG = os.environ.get('KLANG', 'tr')
 SUF = '' if KLANG == 'tr' else '_' + KLANG
 OPTS = {
     'tr': {'country': 'TR', 'city': 'Eskişehir', 'name': 'Sabri Asfaltoğlu', 'rival': 'Necmi Kaldırım', 'party': 'Demlik Partisi'},
+    'pt': {'country': 'BR', 'city': None, 'name': 'Zé Asfalto', 'rival': 'Nelson Calçada', 'party': 'Partido da Chaleira'},
     'en': {'country': 'US', 'city': None, 'name': 'Rick Asphalt', 'rival': 'Ned Sidewalk', 'party': 'Kettle Party'},
 }[KLANG]
 NEWGAME = """(o) => { const {G,Screens,U,P}=window.__cbs; const opts=Object.assign(%s, o||{});

@@ -24,7 +24,7 @@ with sync_playwright() as p:
         page.locator('#fast').click(); page.wait_for_timeout(1000*0.6)
         m['promo_start'] = rec.mark()
         page.evaluate("() => { window.__cbs.Career.promote(); }")
-        page.wait_for_function("() => document.querySelectorAll('.ov').length && /TERF|PROMOT/i.test(document.body.innerText)", timeout=15000)
+        page.wait_for_function("() => document.querySelectorAll('.ov').length && /TERF|PROMOT|PROMOV|ASCEND|SUBIU/i.test(document.body.innerText)", timeout=15000)
         m['promo_shown'] = rec.mark()
         page.wait_for_timeout(1000*3.5)
         m['promo_end'] = rec.mark()
