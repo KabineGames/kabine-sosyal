@@ -4,7 +4,8 @@
 - YouTube: **Gabinete: Simulador Político** · @gabinetejogo · kanal ID `UCmgZd4PBjlv733HF0ohC4zg` (Kabine TR kanalıyla aynı Google hesabında; Claude, Chrome üzerinden yükler).
 - Açıklama, link, anahtar kelimeler girildi. Kit: claude.ai projesindeki `claude/KABINE_BREZILYA_YT_KIT.md`.
 - **Açık iş (Umut):** YouTube telefon doğrulaması (Studio → Ayarlar → Kanal → Özellik uygunluğu). Bu yapılmadan açıklamadaki App Store linki tıklanmıyor.
-- TikTok BR yok (TR kayıtlı hesap Brezilya'ya ulaşmıyor); Instagram BR belki ileride.
+- Instagram BR: **@gabinetejogo** açıldı (26 Kas). Biyografi PT, profil fotoğrafı logo; ilk Reels = 15 sn fragman (A) yayında. Instagram web planlama yapmıyor → sonraki Reels'ler ya yayın anında elle ya da hesap bir Facebook sayfasına bağlanınca Meta Business Suite'ten planlanır. **Umut (mobil):** profil adı "Gabinete: Simulador Político", biyografiye App Store BR linki, hesap türü İçerik üreticisi.
+- TikTok BR yok (TR kayıtlı hesap Brezilya'ya ulaşmıyor).
 
 ## Planlanan Shorts (yayın saati TR 01:00 = Brezilya 19:00)
 | Tarih | Video | Kaynak |
